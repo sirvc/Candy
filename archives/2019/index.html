@@ -5,7 +5,7 @@
   
 
 
-<html class="theme-next muse use-motion" lang="zh-Hans">
+<html class="theme-next pisces use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -80,9 +80,9 @@
 
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
+<meta property="og:title" content="CoFi.Club">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;archives&#x2F;2019&#x2F;index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:site_name" content="CoFi.Club">
 <meta property="og:locale" content="zh-Hans">
 <meta name="twitter:card" content="summary">
 
@@ -92,7 +92,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Muse',
+    scheme: 'Pisces',
     version: '5.1.4',
     sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
@@ -120,7 +120,9 @@
 
 
 
-  <title>归档 | Hexo</title>
+
+
+  <title>归档 | CoFi.Club</title>
   
 
 
@@ -150,7 +152,7 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Hexo</span>
+        <span class="site-title">CoFi.Club</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -185,12 +187,52 @@
         </li>
       
         
+        <li class="menu-item menu-item-about">
+          <a href="/about/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-message">
+          <a href="/message/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-comment"></i> <br />
+            
+            留言
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-archives">
           <a href="/archives/%20" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
             归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-schedule">
+          <a href="/schedule/%20" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-calendar"></i> <br />
+            
+            日程表
           </a>
         </li>
       
@@ -204,7 +246,25 @@
 
 
 
- </div>
+
+
+
+<script>
+    
+    window.onload = function(){
+        var path = 'http://cofi.club'; //����Ҫ�ĳ��㲩�͵ĵ�ַ
+        var localhostItem = String(window.location).split(path)[1];
+        var LiNode = document.querySelectorAll('#menu > li > a')
+        
+        for(var i = 0; i< LiNode.length;i++){
+            var item = String(LiNode[i].href).split(path)[1];
+            if(item == localhostItem && item != undefined){
+                LiNode[i].setAttribute('style','border-bottom:1px solid black');
+            }
+        }
+    };
+
+</script> </div>
     </header>
 
     <main id="main" class="main">
@@ -226,7 +286,7 @@
         
           
         
-        嗯..! 目前共计 1 篇日志。 继续努力。
+        嗯..! 目前共计 2 篇日志。 继续努力。
       </span>
 
       
@@ -240,6 +300,43 @@
           <div class="collection-title">
             <h1 class="archive-year" id="archive-year-2019">2019</h1>
           </div>
+        
+        
+
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/2019/11/14/title/" itemprop="url">
+              
+                <span itemprop="name">title</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2019-11-14T15:43:02+08:00"
+              content="2019-11-14" >
+          11-14
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+
+      
+
+        
+        
+        
+
         
         
 
@@ -313,7 +410,11 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <p class="site-author-name" itemprop="name">John Doe</p>
+              <img class="site-author-image" itemprop="image"
+                src="/images/touxiang.jpg"
+                alt="CoinFi" />
+            
+              <p class="site-author-name" itemprop="name">CoinFi</p>
               <p class="site-description motion-element" itemprop="description"></p>
           </div>
 
@@ -324,7 +425,7 @@
               
                 <a href="/archives/%20%7C%7C%20archive">
               
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -369,7 +470,7 @@
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">John Doe</span>
+  <span class="author" itemprop="copyrightHolder">CoinFi</span>
 
   
 </div>
@@ -383,7 +484,9 @@
 
 
 
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
 
 
 
@@ -482,6 +585,13 @@
 
   
   
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
 
   
 
